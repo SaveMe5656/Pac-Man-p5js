@@ -1,0 +1,4 @@
+Blinky,Pac-Man
+Pinky,4 in front of Pac-Man (upwards has an offset of +4L due to 16-bit coordinate error)
+Inky,Blinky mirrored by 2 in front of Pac-Man (upwards offset of +2L)
+Clyde,Pac-Man unless within a radius of 8

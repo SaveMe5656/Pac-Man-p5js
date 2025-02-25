@@ -1,0 +1,31 @@
+2025-01-23:
+  changelog:
+  - added YAML changelog
+  - overhauled remap system:
+    - added mapping presets
+    - under-the-hood changes
+  - resized canvas to match original arcade game (may be changed/reverted in the future)
+  next:
+    - add maze:
+      - add maze sprites
+      - implement player collision
+  notes: |
+         I don't know if this is actually pre-alpha 4
+         it would've helped if I had initially included version numbers when I started this project so I wouldn't have to make a rough estimate on which pre-alpha stage I'm on
+
+2025-02-24:
+  changelog:
+  - added res/ resource folder
+  - added CSV's relating to ghost behavior to res/
+  - revamped changelog:
+    used dates for each header opposed to versions
+  next:
+    - implement ghost behavior
+    - add maze:
+      - add maze sprites
+      - implement collision:
+        - player
+        - ghost
+  notes: |
+         I probably should've used dates for releases since that makes more sense than making an arbitrary version system.
+         oh well; at least it's been done now

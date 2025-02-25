@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <style>
+            html, body {
+        margin: 0;
+        padding: 0;
+      }
+      canvas {
+        display: block;
+      }
+    </style>
+    <meta charset="utf-8" />
+  </head>
+  <body>
+    <main></main>
+    <button
+      id="remapToggle"
+      onclick="document.getElementById('remapToggle').style.display = 'none'; document.getElementById('remapMenu').style.display = 'inline-block';"
+    >
+      <span style="color: grey">⮞</span> Remap Buttons
+    </button>
+    <div id="remapMenu" style="display: none">
+      <button
+        onclick="document.getElementById('remapToggle').style.display = 'inline-block'; document.getElementById('remapMenu').style.display = 'none';"
+      >
+        <span style="color: blue">⮟</span> Remap Buttons
+      </button>
+      <div style="height: 5px"></div>
+      <select id="buttonIn">
+        <option selected disabled>Select preset/keys</option>
+        <optgroup label="Presets">
+          <option value="presetwasd">Use WASD</option>
+          <option value="presetarrows">Use Arrow Keys</option>
+        </optgroup>
+        <optgroup label="Keys">
+          <option value="up">🡱 Up</option>
+          <option value="left">🡰 Left</option>
+          <option value="down">🡳 Down</option>
+          <option value="right">🡲 Right</option>
+          <option value="a">⮿ Start</option>
+          <option value="+">⛀ Insert Coin</option>
+        </optgroup>
+      </select>
+      <input
+        id="keycodeIn"
+        placeholder="Keycode"
+        style="width: 64px"
+        type="number"
+      />
+      <button onclick="remap()">Remap</button>
+      <br />
+      <button disabled style="color: light-grey">
+        Last key: <span id="keyOut">none</span>
+      </button>
+      <button disabled style="color: light-grey">
+        Keycode: <span id="keycodeOut">N/A</span>
+      </button>
+    </div>
+    <div style="height: 5px"></div>
+    <button
+      id="toast"
+      disabled
+      style="background-color: #999; color: white; display: none"
+    >
+      Mappings Updated!
+    </button>
+    <script src="keymap.js"></script>
+    <script src="sketch.js"></script>
+  </body>
+</html>
