@@ -29,7 +29,7 @@ it would've helped if I had initially included version numbers when I started th
   - Changed remapping menu to general options
   - Replaced `<button>` tags with `<a>` links as a style choice
 - Moved `preload()` function in [`sketch.js`](sketch.js) to be with `setup()` and `draw()`
-- Created a basic library to save/load cookies
+- Created a [basic library](cookie.js) to save/load cookies
 - Added a style selector
 - Implemented cookies to save styles
 ### Plans
@@ -61,3 +61,13 @@ Update 4:
   also managed to make the settings save with a little bit of cookie manipulation<br>
   overall I'm rather pleased with the work I was able to do **:D**<br>
   <sup>anyways it's a bit past midnight; I should get some sleep</sup>
+
+## 2025-02-25
+### Changes
+- Added saving of keymap to cookies
+- Detatched remap toast from button object
+- Added return function to `saveCookie` in [`cookie.js`](cookie.js) for debugging
+### Plans
+See [2025-02-24](#plans-1)
+### Notes
+- it's almost 2 AM; what am I still doing awake **o.0**
