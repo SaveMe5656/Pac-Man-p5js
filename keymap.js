@@ -1,12 +1,10 @@
-let button = {
-  up: 87, // W
-  left: 65, // A
-  down: 83, // S
-  right: 68, // D
-  start: 13, // Return
-  coin: 32, // Spacebar
-  toastTime: 0, // irrelevant, only for toast message delay when key mapping is changed
-};
+if (!loadCookie("keymap")) saveCookie(
+  "keymap",
+  '{"up":87,"left":65,"down":83,"right":68,"start":13,"coin":32}'
+)
+button = JSON.parse(loadCookie("keymap"))
+
+buttonToast = 0;
 
 function remap(actionCode) {
   let action = "";
@@ -22,10 +20,10 @@ function remap(actionCode) {
       document.getElementById("keycodeOut").innerHTML = keyCode;
       break;
     case "draw":
-      if (button.toastTime) {
+      if (buttonToast) {
         if (document.getElementById("toast").style.display == "none")
           document.getElementById("toast").style.display = "inline-block";
-        button.toastTime--;
+        buttonToast--;
       } else if (
         document.getElementById("toast").style.display == "inline-block"
       )
@@ -78,7 +76,8 @@ function remap(actionCode) {
             toast = function () {};
         }
 
-        button.toastTime = 180;
+        saveCookie("keymap",JSON.stringify(button))
+        buttonToast = 180;
       }
   }
 }
