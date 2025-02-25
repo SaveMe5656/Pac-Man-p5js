@@ -47,7 +47,7 @@ Update 1:
 Update 2:
 - so far I haven't done much other than revamp/update the log, as well as add some references to help myself in the future<br>
   I'm probably still going to do some actual programming, but for now this is what I've got<br>
-  also, I do still have to finish [ghosttargets.csv](pacmanclone/res/ghosttargets.csv) **:p**<br>
+  also, I do still have to finish [`ghosttargets.csv`](pacmanclone/res/ghosttargets.csv) **:p**<br>
 
 Update 3:
 - I just tweaked some things stylisticly, as well as tried to get a game style switcher implemented (I failed **:/**)
