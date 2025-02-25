@@ -29,6 +29,9 @@ it would've helped if I had initially included version numbers when I started th
   - Changed remapping menu to general options
   - Replaced `<button>` tags with `<a>` links as a style choice
 - Moved `preload()` function in [`sketch.js`](sketch.js) to be with `setup()` and `draw()`
+- Created a basic library to save/load cookies
+- Added a style selector
+- Implemented cookies to save styles
 ### Plans
 - Implement ghost behavior
   - Targeting system
@@ -38,7 +41,7 @@ it would've helped if I had initially included version numbers when I started th
   - Implement Collision:
     - Player
     - Ghost
-- Add style selector (somehow)
+- Implement keymap saving
 ### Notes
 Update 1:
 - I probably should've used dates for releases since that makes more sense than making an arbitrary version system.<br>
@@ -52,3 +55,9 @@ Update 2:
 Update 3:
 - I just tweaked some things stylisticly, as well as tried to get a game style switcher implemented (I failed **:/**)
   will probably try making style switcher at a later point in time
+
+Update 4:
+- by some miracle I somehow found a way to implement the style selector I wanted<br>
+  also managed to make the settings save with a little bit of cookie manipulation<br>
+  overall I'm rather pleased with the work I was able to do **:D**<br>
+  <sup>anyways it's a bit past midnight; I should get some sleep</sup>
