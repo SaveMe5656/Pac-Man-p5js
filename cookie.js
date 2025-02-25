@@ -1,5 +1,7 @@
 function saveCookie(label, value) {
-  document.cookie = label + "=" + value + "; max-age=34560000";
+  out = label + "=" + value + "; max-age=34560000";
+  document.cookie = out;
+  return out;
 }
 
 function loadCookie(label) {
