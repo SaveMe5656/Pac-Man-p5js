@@ -1,8 +1,9 @@
 # p5.js Pac-Man
 An attempt at a Pac-Man clone coded with HTML/JavaScript with the help of the [p5.js](https://p5js.org/) library.
 
+# Changelog
 ## 2025-01-23
-### Changelog
+### Changes
 - Added [YAML changelog](res/logOld.yaml) (now deprecated)
 - Overhauled remap system
   - Added mapping presets
@@ -17,7 +18,7 @@ I don't know if this is actually pre-alpha 4<br>
 it would've helped if I had initially included version numbers when I started this project so I wouldn't have to make a rough estimate on which pre-alpha stage I'm on
 
 ## 2025-02-24
-### Changelog
+### Changes
 - Added [`res/` resource folder](res)
 - Added [CSV's relating to ghost behavior](res/ghostBehavior) to [`res/`](res)
 - Revamped changelog
