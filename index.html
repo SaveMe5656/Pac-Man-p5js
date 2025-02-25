@@ -1,8 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <script src="p5.js"></script>
+    <script src="p5.sound.min.js"></script>
     <title>p5.js Pac-Man</title>
     <style>
       body {
@@ -28,6 +28,12 @@
         <span style="color: blue">⮟</span> Options
       </a>
       <br />
+      <select id="styleIn">
+        <option value="j2me">J2ME</option>
+        <option value="classic">Classic</option>
+      </select>
+      <button onclick="saveCookie('style',document.getElementById('styleIn').value);location.reload()">GO</button>
+      <br />
       <select id="buttonIn">
         <option selected disabled>Select preset/keys</option>
         <optgroup label="Presets">
@@ -49,7 +55,7 @@
         style="width: 64px"
         type="number"
       />
-      <button onclick="remap()">Remap</button>
+      <button onclick="remap()">GO</button>
       <br />
       <button disabled style="color: light-grey">
         Last key: <span id="keyOut">none</span>
@@ -66,6 +72,7 @@
       </button>
     </div>
     <script src="keymap.js"></script>
+    <script src="cookie.js"></script>
     <script src="sketch.js"></script>
   </body>
 </html>

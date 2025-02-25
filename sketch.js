@@ -9,7 +9,10 @@ class spritemap {
   }
 }
 
-let style = "j2me";
+let style;
+if (!loadCookie("style")) saveCookie("style", "j2me")
+style = loadCookie("style");
+document.getElementById('styleIn').value = style;
 
 function sprite(sheet, x, y) {
   return spritesheet[sheet].img.get(
@@ -94,13 +97,12 @@ let ghost;
 
 function preload() {
   spritesheet = [
-    new spritemap("sprites/" + style + "/pac-man.png", 16),
-    new spritemap("sprites/" + style + "/ghosts.png", 16),
+    new spritemap("styles/" + style + "/pac-man.png", 16),
+    new spritemap("styles/" + style + "/ghosts.png", 16),
   ];
 }
 
 function setup() {
-  noLoop();
   createCanvas(224, 288);
 
   pac = new Char(
@@ -174,8 +176,8 @@ function keyPressed() {
     case button.coin:
       pac.changeDir(-1);
       break;
-    case button.start:
+    /*case button.start:
       loop();
-      break;
+      break;*/
   }
 }
