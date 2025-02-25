@@ -3,32 +3,31 @@
   <head>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/p5.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/p5.js/1.9.0/addons/p5.sound.min.js"></script>
+    <title>p5.js Pac-Man</title>
     <style>
-            html, body {
-        margin: 0;
-        padding: 0;
-      }
-      canvas {
-        display: block;
+      body {
+        font-family: sans-serif;
       }
     </style>
     <meta charset="utf-8" />
   </head>
   <body>
     <main></main>
-    <button
+    <a
       id="remapToggle"
+      href="javascript:"
       onclick="document.getElementById('remapToggle').style.display = 'none'; document.getElementById('remapMenu').style.display = 'inline-block';"
     >
-      <span style="color: grey">⮞</span> Remap Buttons
-    </button>
+      <span style="color: grey">⮞</span> Options
+    </a>
     <div id="remapMenu" style="display: none">
-      <button
+      <a
+        href="javascript:"
         onclick="document.getElementById('remapToggle').style.display = 'inline-block'; document.getElementById('remapMenu').style.display = 'none';"
       >
-        <span style="color: blue">⮟</span> Remap Buttons
-      </button>
-      <div style="height: 5px"></div>
+        <span style="color: blue">⮟</span> Options
+      </a>
+      <br />
       <select id="buttonIn">
         <option selected disabled>Select preset/keys</option>
         <optgroup label="Presets">
@@ -58,15 +57,14 @@
       <button disabled style="color: light-grey">
         Keycode: <span id="keycodeOut">N/A</span>
       </button>
+      <button
+        id="toast"
+        disabled
+        style="background-color: #999; color: white; display: none"
+      >
+        Mappings Updated!
+      </button>
     </div>
-    <div style="height: 5px"></div>
-    <button
-      id="toast"
-      disabled
-      style="background-color: #999; color: white; display: none"
-    >
-      Mappings Updated!
-    </button>
     <script src="keymap.js"></script>
     <script src="sketch.js"></script>
   </body>

@@ -11,13 +11,6 @@ class spritemap {
 
 let style = "j2me";
 
-function preload() {
-  spritesheet = [
-    new spritemap("sprites/" + style + "/pac-man.png", 16),
-    new spritemap("sprites/" + style + "/ghosts.png", 16),
-  ];
-}
-
 function sprite(sheet, x, y) {
   return spritesheet[sheet].img.get(
     x * spritesheet[sheet].w,
@@ -98,6 +91,13 @@ let pac;
 let ghost;
 
 //--//--//--//--//
+
+function preload() {
+  spritesheet = [
+    new spritemap("sprites/" + style + "/pac-man.png", 16),
+    new spritemap("sprites/" + style + "/ghosts.png", 16),
+  ];
+}
 
 function setup() {
   noLoop();

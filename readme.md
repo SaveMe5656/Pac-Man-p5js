@@ -25,6 +25,10 @@ it would've helped if I had initially included version numbers when I started th
   - Used dates for each header opposed to versions
   - Switched file type from YAML to MD
   - Rewrote changelog
+- Overhauled "option" menu
+  - Changed remapping menu to general options
+  - Replaced `<button>` tags with `<a>` links as a style choice
+- Moved `preload()` function in [`sketch.js`](sketch.js) to be with `setup()` and `draw()`
 ### Plans
 - Implement ghost behavior
   - Targeting system
@@ -34,6 +38,7 @@ it would've helped if I had initially included version numbers when I started th
   - Implement Collision:
     - Player
     - Ghost
+- Add style selector (somehow)
 ### Notes
 Update 1:
 - I probably should've used dates for releases since that makes more sense than making an arbitrary version system.<br>
@@ -43,3 +48,7 @@ Update 2:
 - so far I haven't done much other than revamp/update the log, as well as add some references to help myself in the future<br>
   I'm probably still going to do some actual programming, but for now this is what I've got<br>
   also, I do still have to finish [ghosttargets.csv](pacmanclone/res/ghosttargets.csv) **:p**<br>
+
+Update 3:
+- I just tweaked some things stylisticly, as well as tried to get a game style switcher implemented (I failed **:/**)
+  will probably try making style switcher at a later point in time
