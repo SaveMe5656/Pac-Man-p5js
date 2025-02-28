@@ -71,3 +71,21 @@ Update 4:
 See [2025-02-24](#plans-1)
 ### Notes
 - it's almost 2 AM; what am I still doing awake **o.0**
+
+## 2025-2-28
+### Changes
+- Added `killCookie` to [`cookie.js`](cookie.js) for deleting cookies
+- Added `config.json` to styles for configuration of various visuals
+### Plans
+- Items from [2025-02-24](#plans-1)
+- Add more JSON-driven functions for styles
+  - Scale
+  - More animations
+  - Multiple files (if I don't end up congregating all sprites onto one sheet)
+- Implement a better animation system
+- Add animation support to sprites as a whole
+### Notes
+- I ended up spending around 5 hours trying to get JSON-driven spritesheet fetching working<br>
+  I never did **:p**<br>
+  I probably will eventually congregate all the sprites onto one image at some point; it'll make things so much easier<br>
+  Also, my code is an absolute mess; I kinda want to start from scratch just so things are tidier
