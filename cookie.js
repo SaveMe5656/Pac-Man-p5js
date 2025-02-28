@@ -20,3 +20,9 @@ function loadCookie(label) {
 
   return undefined;
 }
+
+function killCookie(label) {
+  out = label + "=; max-age=0";
+  document.cookie = out;
+  return out;
+}
