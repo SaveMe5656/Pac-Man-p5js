@@ -1,4 +1,5 @@
 let spritesheet;
+
 class spritemap {
   constructor(img, w, h) {
     this.img = loadImage(img);
@@ -9,11 +10,6 @@ class spritemap {
   }
 }
 
-let style;
-if (!loadCookie("style")) saveCookie("style", "j2me")
-style = loadCookie("style");
-document.getElementById('styleIn').value = style;
-
 function sprite(sheet, x, y) {
   return spritesheet[sheet].img.get(
     x * spritesheet[sheet].w,
@@ -22,6 +18,13 @@ function sprite(sheet, x, y) {
     spritesheet[sheet].h
   );
 }
+
+let style;
+if (!loadCookie("style")) saveCookie("style", "j2me")
+style = loadCookie("style");
+document.getElementById('styleIn').value = style;
+
+let config;
 
 //--//--//--//--//
 
@@ -79,7 +82,7 @@ class Char {
 /*
   Character Constructor Seed Guide:
   "020001011202130314041"
-   ↑↑↑↑ ↑ ↑ ↑ ↑ ...
+   ↑↑↑↑ ↑ ↑ ...
    |||| Sprites for movement animation
    |||Idle sprite
    ||Animation speed (speed = 1/X seconds)
@@ -96,6 +99,7 @@ let ghost;
 //--//--//--//--//
 
 function preload() {
+  config = loadJSON("styles/" + style + "/config.json");
   spritesheet = [
     new spritemap("styles/" + style + "/pac-man.png", 16),
     new spritemap("styles/" + style + "/ghosts.png", 16),
@@ -108,29 +112,29 @@ function setup() {
   pac = new Char(
     width / 2 - spritesheet[0].w / 2,
     height / 2 - spritesheet[0].h / 2,
-    "0440000708070005060500030403000102010"
+    config.pac
   );
 
   ghost = [
     new Char(
       width * (3 / 8) - spritesheet[0].w / 2,
       height * (3 / 8) - spritesheet[0].h / 2,
-      "124406070405020300010"
+      config.ghost[0]
     ),
     new Char(
       width * (5 / 8) - spritesheet[0].w / 2,
       height * (3 / 8) - spritesheet[0].h / 2,
-      "124216171415121310111"
+      config.ghost[1]
     ),
     new Char(
       width * (5 / 8) - spritesheet[0].w / 2,
       height * (5 / 8) - spritesheet[0].h / 2,
-      "124626272425222320212"
+      config.ghost[2]
     ),
     new Char(
       width * (3 / 8) - spritesheet[0].w / 2,
       height * (5 / 8) - spritesheet[0].h / 2,
-      "124636373435323330313"
+      config.ghost[3]
     ),
   ];
   pac.changeDir(-1);
